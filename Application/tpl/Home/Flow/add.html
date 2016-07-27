@@ -1,0 +1,29 @@
+<extend name="base" />
+
+<block name="main">
+<div id="main">
+<table>
+<tr>
+	<th><input type="checkbox" selected="selected"></input>全选</th>
+	<th colspan="2">商品</th>
+	<th>单价(元)</th>
+	<th>数量</th>
+	<th>小计(元)</th>
+	<th>操作</th>
+</tr>
+<form action="__CONTROLLER__/checkout" method="post" content-type="applicaiton/x-www-form-urlencoded">
+<foreach name="buy_list" item="v">
+<tr>
+	<td><input type="checkbox" selected="selected" /></td>
+	<td><img src="{$v.thumb_img}" alt="" /></td>
+	<td>{$v.name}</td>
+	<td>{$v.shop_price}</td><td><a id="dec{$v.id}" style="width:40px;border:1px black solid;" onclick="decQty(this.id);">&nbsp;-&nbsp;</a><input class="num" name="info[{$v.id}][num]" id="qty_input{$v.id}" type="text" value="{$v.num}" style="width:20px;" onchange="createOB(this);"/><a id="add{$v.id}" style="width:40px;border:1px black solid;" onclick="addQty(this.id);">&nbsp;+&nbsp;</a></td><td><span></span>
+	</td>
+	<td><a href="">删除</a><input type="text" hidden="hidden" name="info[{$v.id}][id]" value="{$v.id}"/></td>
+</tr>
+</foreach>
+</table>
+<button type="submit" style="float:right;">去结算</button>
+</form>
+</div>
+</block>

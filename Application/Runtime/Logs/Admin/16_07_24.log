@@ -1,0 +1,15 @@
+[ 2016-07-24T04:37:27+08:00 ] ::1 /newshop/Admin/Manager/checkCaptcha?data=t55e
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003112s ]
+
+[ 2016-07-24T04:37:37+08:00 ] ::1 /newshop/Admin/Manager/checkCaptcha?data=gfnv
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001325s ]
+
+[ 2016-07-24T04:37:48+08:00 ] ::1 /newshop/Admin/Manager/checkCaptcha?data=smpc
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001348s ]
+

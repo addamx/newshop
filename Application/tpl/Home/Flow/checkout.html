@@ -1,0 +1,39 @@
+<extend name="base" />
+
+<block name="main">
+
+<div id="main">
+<div id="rec">
+<form action="__CONTROLLER__/done" method="post" content-type="application/x-www-form-urlencoded">
+<div><label for="xm">收货人姓名: </label><input id="xm" name="xm" type="text"></div>
+<div><label for="mobile">手机号码: </label><input id="mobile" name="mobile" type="text"></div>
+<div><label for="address">具体地址: </label><input id="address" name="address" type="text"></div>
+<div><label for="paytype">支付方式: </label><select name="paytype" id="paytype">
+	<option value="1">在线支付</option>
+	<option value="2">货到付款</option>
+</select></div>
+<div><label for="note">备注(20字符内): </label><textarea id="note" name="note"></textarea></div>
+
+<button type="submit">提交</button>
+</form>
+</div>
+<div id="cart">
+<h2 id="ttl">总价: {$ttl}</h2>
+<table>
+<tr>
+	<th colspan="2">商品</th>
+	<th>单价(元)</th>
+	<th>数量</th>
+</tr>
+<foreach name="cart" item="v">
+<tr>
+<td><img src="{$v.thumb_img}" alt=""></td>
+<td>{$v.name}</td>
+<td>{$v.shop_price}</td>
+<td>{$v.num}</td>
+</tr>
+</foreach>
+</table>
+</div>
+</div>
+</block>

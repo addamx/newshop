@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv=content-type content="text/html; charset=utf-8" />
+        <title>管理中心:{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
+    </head>
+<body>
+<p>{$info}</p>
+<form action="__SELF__" method="post" >
+	<p>
+		<label for="">管理员</label>
+		<select name="uid" id="uid">
+			<option value="">请选择</option>
+			<foreach name="mg_group_list" item="v">
+			<option value="{$v.uid}">{$v.username}</option>
+			</foreach>
+		</select>
+		<label for="">角色</label>
+		<select name="group_id" id="group_id">
+			<option value="">请选择</option>
+			<foreach name="group_list" item="vv">
+			<option value="{$vv.id}">{$vv.title}</option>
+			</foreach>
+		</select>
+		<button type="submit">提交</button>
+	</p>
+</form>
+
+<table border="1">
+<tr>
+<th>管理员</th>
+<th>角色</th>
+<th>操作</th>
+</tr>
+
+<foreach name="mg_group_list" item="d">
+<tr>
+<td>{$d.username}</td>
+<td>{$d.title}</td>
+<td><a href="#">重置权限</a></td>
+</tr>
+</foreach>
+
+
+<jquery/>
+</body>
+</html>

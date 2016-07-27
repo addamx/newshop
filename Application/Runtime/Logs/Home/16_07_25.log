@@ -1,0 +1,15 @@
+[ 2016-07-25T23:13:24+08:00 ] 127.0.0.1 /newshop/index.php
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2016-07-25T23:20:29+08:00 ] 127.0.0.1 /newshop/index.php?s=/Home/goods/detail?gid=19
+ERR: 非法操作:detail?gid=19
+
+[ 2016-07-25T23:20:42+08:00 ] 127.0.0.1 /newshop/index.php?s=/Home/goods/detail?gid=21
+ERR: 非法操作:detail?gid=21
+
+[ 2016-07-25T23:20:48+08:00 ] 127.0.0.1 /newshop/index.php?s=/Home/Index/category?cid=9
+ERR: 非法操作:category?cid=9
+
+[ 2016-07-25T23:21:18+08:00 ] 127.0.0.1 /newshop/index.php?s=/Home/Index/category?cid=9
+ERR: 非法操作:category?cid=9
+

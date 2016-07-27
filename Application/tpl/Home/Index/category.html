@@ -1,0 +1,18 @@
+<extend name="base" />
+<block name="title"><title>NEWSHOP -- 首页</title></block>
+
+<block name="main">
+<div id="main">
+	<div id="cat_goods" class="">
+		<foreach name='cat_goods' item='v'>
+			<div class="good">
+				<img src="{$Think.const.UPLOAD_URL}<php>echo explode(',', $v['goods_img'])[0];</php>">
+				<div><a href="__MODULE__/goods/detail?gid={$v.id}">{$v.name}</a></div>
+				<div>[新品]<span> ¥{$v.shop_price}&nbsp;&nbsp;<a href="__MODULE__/Flow/add?goods_id={$v.id}">购买</a></span></div>
+			</div>
+		</foreach>
+	</div>
+</div>
+</block>
+
+

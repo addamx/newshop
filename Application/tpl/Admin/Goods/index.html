@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv=content-type content="text/html; charset=utf-8" />
+        <title>管理中心:{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
+    </head>
+<body>
+<p><label for="category">商品分类: </label>
+	<select name="cat_id" id="category" onchange='chcat();'>
+		<option value="0" <eq name='cat' value='0'>selected='selected'</eq>>无</option>
+		<foreach name="cats" item="v">
+		<option value="{$v.id}" <eq name='cat' value='$v.id'>selected='selected'</eq>>{$v.lev|str_repeat="&nbsp;",###*4}{$v.name}</option>
+		</foreach>
+	</select>
+</p>
+<table border='1'>
+<tr>
+	<th>商品名</th>
+	<th>序号</th>
+	<th>售价</th>
+	<th>市场价</th>
+	<th>库存</th>
+	<th>添加时间</th>
+	<th>上次修改</th>
+	<th colspan='2'>操作</th>
+</tr>
+<foreach name="list" item="v">
+<tr>
+	<td>{$v.name}</td>
+	<td>{$v.sn}</td>
+	<td>{$v.shop_price}</td>
+	<td>{$v.market_price}</td>
+	<td>{$v.goods_number}</td>
+	<td>{$v.add_time|date="h:i d/m/Y",###}</td>
+	<td>{$v.last_update|date="h:i d/m/Y",###}</td>
+	<td><a href="__CONTROLLER__/edit?id={$v.id}">编辑</a></td>
+	<td><a href="t.php" onclick="return delgood('{$v.id}');">删除</a></td>
+</tr>
+</foreach>
+<tr><td colspan="9" style="text-align: center;">{$page}</td></tr>
+</table>
+
+<jquery/>
+<script type="text/javascript">
+function delgood(id) {
+	$.ajax({
+		url: "__CONTROLLER__/ajaxdel",
+		data: {'id':id},
+		type: 'GET',
+		dataType: "json",
+		success:function(rst) {
+			console.log(rst);
+			if(rst.result) {
+				alert(rst.info);
+				window.location.reload();
+			}
+		}
+	})
+	return false;
+}
+function chcat() {
+	var cat_id = $('#category').val();
+	window.location.href="__CONTROLLER__/index?p=1&cat="+cat_id;
+}
+
+</script>
+</body>
+</html>

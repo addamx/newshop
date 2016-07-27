@@ -1,0 +1,191 @@
+[ 2016-07-23T03:02:05+08:00 ] ::1 /newshop/Application//Public//static/home/js/register.js
+ERR: 无法加载控制器:Application
+
+[ 2016-07-23T03:04:26+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=xxxxx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002360s ]
+
+[ 2016-07-23T03:04:28+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=xxxxx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001981s ]
+
+[ 2016-07-23T03:04:29+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=xxxxx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002074s ]
+
+[ 2016-07-23T03:04:34+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=vg6j
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002034s ]
+
+[ 2016-07-23T03:05:20+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=2rfc
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002291s ]
+
+[ 2016-07-23T03:05:25+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=2rfc
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001626s ]
+
+[ 2016-07-23T03:05:26+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=2rfc
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001951s ]
+
+[ 2016-07-23T03:05:33+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=pnnx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001696s ]
+
+[ 2016-07-23T03:17:51+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=pyjs
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002055s ]
+
+[ 2016-07-23T03:17:52+08:00 ] ::1 /newshop/Home/user/register
+ERR: 1054:Unknown column 'salt' in 'field list'
+ [ SQL语句 ] : INSERT INTO `newshop_users` (`username`,`password`,`email`,`status`,`salt`,`register_time`,`last_login_ip`,`last_login_time`) VALUES ('addams','879848a5291d3997a5eafd090d81670b','haoranclover@gmail.com','1','9*ajsi3u','1469215072','','1469215072')
+
+[ 2016-07-23T03:20:09+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=yzxq
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002110s ]
+
+[ 2016-07-23T03:42:23+08:00 ] ::1 /newshop/Home/User/login
+ERR: 非法操作:login
+
+[ 2016-07-23T04:12:04+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=jwek
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002295s ]
+
+[ 2016-07-23T04:12:14+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=jwek
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004676s ]
+
+[ 2016-07-23T04:14:39+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=jwek
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002056s ]
+
+[ 2016-07-23T04:15:07+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=jwek
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002071s ]
+
+[ 2016-07-23T05:27:21+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=ec5q
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015066s ]
+
+[ 2016-07-23T06:02:57+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=vv62
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003559s ]
+
+[ 2016-07-23T06:17:28+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=ivxa
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001651s ]
+
+[ 2016-07-23T06:17:36+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=nn3i
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002210s ]
+
+[ 2016-07-23T09:32:12+08:00 ] ::1 /newshop/home/flow
+ERR: 非法操作:index
+
+[ 2016-07-23T09:32:56+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=pujr
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001657s ]
+
+[ 2016-07-23T10:02:58+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=twn5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+
+[ 2016-07-23T10:03:04+08:00 ] ::1 /newshop/honme
+ERR: 无法加载控制器:Honme
+
+[ 2016-07-23T16:30:32+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=m7k7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004107s ]
+
+[ 2016-07-23T16:46:50+08:00 ] ::1 /newshop/Home/Flow/
+ERR: 非法操作:index
+
+[ 2016-07-23T16:50:20+08:00 ] ::1 /newshop/Home/Flow/done
+ERR: Think\Model:detele方法不存在！
+
+[ 2016-07-23T17:01:22+08:00 ] ::1 /newshop/Home/Flow/done
+ERR: 1406:Data too long for column 'goods_name' at row 1
+ [ SQL语句 ] : INSERT INTO `newshop_ordgoods` (`ordinfo_id`,`goods_id`,`goods_name`,`shop_price`) VALUES ('7','19','华为 麦芒5 全网通 4GB+64GB版 香槟金 移动联通电信4G手机 双卡双待','2599.00'),('7','21','三星 Galaxy C5（SM-C5000）32G版 枫叶金 移动联通电信4G手机 双卡双待','2199.00'),('7','20','小米 Note 全网通 白色 移动联通电信4G手机 双卡双待','1299.00')
+
+[ 2016-07-23T17:16:24+08:00 ] ::1 /newshop/Home/Flow/done
+ERR: 1054:Unknown column 'ordertime' in 'field list'
+ [ SQL语句 ] : INSERT INTO `newshop_ordinfo` (`xm`,`mobile`,`address`,`paytype`,`note`,`ord_sn`,`ordertime`) VALUES ('陈少','18927389332','yui Rodad 12th','0','','OD2016072346706','1469265384')
+
+[ 2016-07-23T17:20:18+08:00 ] ::1 /newshop/Home/Flow/done
+ERR: 1406:Data too long for column 'ord_sn' at row 1
+ [ SQL语句 ] : INSERT INTO `newshop_ordinfo` (`xm`,`mobile`,`address`,`paytype`,`note`,`ord_sn`,`ordtime`) VALUES ('陈少','18927389332','yui Rodad 12th','0','','OD2016072342940','1469265618')
+
+[ 2016-07-23T17:31:42+08:00 ] ::1 /newshop/Home/Flow/done
+ERR: 1054:Unknown column 'num' in 'field list'
+ [ SQL语句 ] : INSERT INTO `newshop_ordgoods` (`ordinfo_id`,`goods_id`,`goods_name`,`shop_price`,`num`) VALUES ('17','19','华为 麦芒5 全网通 4GB+64GB版 香槟金 移动联通电信4G手机 双卡双待','2599.00','1'),('17','21','三星 Galaxy C5（SM-C5000）32G版 枫叶金 移动联通电信4G手机 双卡双待','2199.00','2')
+
+[ 2016-07-23T18:08:17+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=ynsm
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001371s ]
+
+[ 2016-07-23T18:27:37+08:00 ] ::1 /newshop/User/index.html
+ERR: 1146:Table 'newshop.newshop_orderinfo' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `newshop_orderinfo`
+
+[ 2016-07-23T18:28:32+08:00 ] ::1 /newshop/User/index.html
+ERR: 1146:Table 'newshop.newshop_orderinfo' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `newshop_orderinfo`
+
+[ 2016-07-23T18:32:42+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=yjb3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002111s ]
+
+[ 2016-07-23T19:11:04+08:00 ] ::1 /newshop/User/index.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'index ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `newshop_home_menu` WHERE ( name=home/user/index ) LIMIT 1  
+
+[ 2016-07-23T19:11:59+08:00 ] ::1 /newshop/User/index.html
+ERR: Think\Controller:assgin方法不存在！
+
+[ 2016-07-23T19:19:32+08:00 ] ::1 /newshop/Home/Index/category?cid=8
+ERR: Think\Controller:exBread方法不存在！
+
+[ 2016-07-23T19:22:26+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=cuvx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001402s ]
+SQL: SHOW COLUMNS FROM `newshop_home_menu` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `newshop_home_menu` WHERE ( name='home/user/checkcaptcha' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `newshop_home_menu`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: info F:\Dropbox\WorkPlace\WWW\newshop\Application\Common\Model\BaseModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: info F:\Dropbox\WorkPlace\WWW\newshop\Application\Common\Model\BaseModel.class.php 第 72 行.
+
+[ 2016-07-23T19:27:04+08:00 ] ::1 /newshop/Home/User/checkCaptcha?data=xebi
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001403s ]
+SQL: SHOW COLUMNS FROM `newshop_home_menu` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `newshop_home_menu` WHERE ( name='home/user/checkcaptcha' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `newshop_home_menu`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: info F:\Dropbox\WorkPlace\WWW\newshop\Application\Common\Model\BaseModel.class.php 第 61 行.
+NOTIC: [8] Undefined variable: info F:\Dropbox\WorkPlace\WWW\newshop\Application\Common\Model\BaseModel.class.php 第 72 行.
+

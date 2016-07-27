@@ -1,0 +1,150 @@
+[ 2016-07-22T01:18:09+08:00 ] ::1 /newshop/Home/xxxx/ad1.html
+ERR: 无法加载控制器:Xxxx
+
+[ 2016-07-22T01:19:57+08:00 ] ::1 /newshop/Home/Goods/add?id=19
+ERR: 非法操作:add
+
+[ 2016-07-22T01:19:58+08:00 ] ::1 /newshop/Home/Goods/add?id=19
+ERR: 非法操作:add
+
+[ 2016-07-22T01:20:47+08:00 ] ::1 /newshop/Home/feed
+ERR: 无法加载控制器:Feed
+
+[ 2016-07-22T01:20:54+08:00 ] ::1 /newshop/Home/index/fed
+ERR: 非法操作:fed
+
+[ 2016-07-22T01:23:30+08:00 ] ::1 /newshop/Home/index/fed
+ERR: 非法操作:fed
+
+[ 2016-07-22T01:23:31+08:00 ] ::1 /newshop/Home/feed
+ERR: 无法加载控制器:Feed
+
+[ 2016-07-22T02:19:00+08:00 ] ::1 /newshop/Home/Index/category?cid=8
+ERR: 非法操作:category
+
+[ 2016-07-22T02:21:31+08:00 ] ::1 /newshop/Home/Index/category?cid=11
+ERR: 非法操作:category
+
+[ 2016-07-22T02:49:33+08:00 ] ::1 /newshop/Home/index
+ERR: Think\Model:getCatTree方法不存在！
+
+[ 2016-07-22T03:02:15+08:00 ] ::1 /newshop/Home/Index/category?cid=8
+ERR: 模板不存在:./Application/tpl/Home/Index/category.html
+
+[ 2016-07-22T04:18:32+08:00 ] ::1 /newshop/Home/Goods/add?id=20
+ERR: 非法操作:add
+
+[ 2016-07-22T04:18:44+08:00 ] ::1 /newshop/Home/Goods/add?id=20
+ERR: 非法操作:add
+
+[ 2016-07-22T04:20:29+08:00 ] ::1 /newshop/Home/Goods
+ERR: 模板不存在:./Application/tpl/Home/Goods/index.html
+
+[ 2016-07-22T04:20:34+08:00 ] ::1 /newshop/Home/Goods/index
+ERR: 模板不存在:./Application/tpl/Home/Goods/index.html
+
+[ 2016-07-22T04:21:23+08:00 ] ::1 /newshop/Home/Goods
+ERR: 模板不存在:./Application/tpl/Home/Goods/index.html
+
+[ 2016-07-22T04:21:25+08:00 ] ::1 /newshop/Home/Goods/add?id=20
+ERR: 非法操作:add
+
+[ 2016-07-22T04:25:01+08:00 ] ::1 /newshop/Home/Index/goods/
+ERR: 非法操作:goods
+
+[ 2016-07-22T04:25:09+08:00 ] ::1 /newshop/Home/Index/goods/index/
+ERR: 非法操作:goods
+
+[ 2016-07-22T04:28:55+08:00 ] ::1 /newshop/Home/Goods/category?cid=
+ERR: 非法操作:category
+
+[ 2016-07-22T04:35:52+08:00 ] ::1 /newshop/Home/goods/detail?gid=19
+ERR: 非法操作:detail
+
+[ 2016-07-22T04:36:49+08:00 ] ::1 /newshop/Home/goods/detail?gid=20
+ERR: 模板不存在:./Application/tpl/Home/Goods/detail.html
+
+[ 2016-07-22T04:42:14+08:00 ] ::1 /newshop/Home/Goods/category?cid=8
+ERR: 非法操作:category
+
+[ 2016-07-22T04:42:38+08:00 ] ::1 /newshop/Home/Goods/category?cid=8
+ERR: 非法操作:category
+
+[ 2016-07-22T04:43:19+08:00 ] ::1 /newshop/Home/Goods/category?cid=8
+ERR: 非法操作:category
+
+[ 2016-07-22T05:26:57+08:00 ] ::1 /newshop/Application//Public//static/home/js/goods.css
+ERR: 无法加载控制器:Application
+
+[ 2016-07-22T05:26:58+08:00 ] ::1 /newshop/Application//Public//static/home/js/goods.css
+ERR: 无法加载控制器:Application
+
+[ 2016-07-22T06:56:24+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=2&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T06:56:44+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=0&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T06:57:01+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=2&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T06:57:27+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=3&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T06:57:34+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=0&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T06:57:37+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=0&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T07:00:14+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=0&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T07:00:30+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=1&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T07:07:06+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=0&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T07:07:31+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=0&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T07:07:35+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=1&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T07:07:48+08:00 ] ::1 /newshop/Home/Flow/add
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T07:08:39+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=1&goods_id=19&__hash__=7803f9257e03c9415a6359c746d53c89_50a919ff8edff48e7d86321c56b336f4
+ERR: 参数错误或者未定义:id
+
+[ 2016-07-22T21:13:13+08:00 ] ::1 /newshop/Home/Flow/
+ERR: 非法操作:index
+
+[ 2016-07-22T21:53:39+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=1&goods_id=22&__hash__=002696d6105e7e0c5adf08a98f3ce6cd_eca1ad0915de8f94c5fc99e2a3962354
+ERR: 模板不存在:./Application/tpl/Home/Flow/add.html
+
+[ 2016-07-22T21:53:45+08:00 ] ::1 /newshop/Home/Flow/add?goods_qty=1&goods_id=22&__hash__=002696d6105e7e0c5adf08a98f3ce6cd_eca1ad0915de8f94c5fc99e2a3962354
+ERR: 模板不存在:./Application/tpl/Home/Flow/add.html
+
+[ 2016-07-22T22:03:43+08:00 ] ::1 /newshop/Flow/checkout.html
+ERR: 模板不存在:./Application/tpl/Home/Flow/checkout.html
+
+[ 2016-07-22T22:04:01+08:00 ] ::1 /newshop/Flow/checkout.html
+ERR: 模板不存在:./Application/tpl/Home/Flow/checkout.html
+
+[ 2016-07-22T22:04:04+08:00 ] ::1 /newshop/Flow/checkout.html
+ERR: 模板不存在:./Application/tpl/Home/Flow/checkout.html
+
+[ 2016-07-22T22:29:06+08:00 ] ::1 /newshop/Home/Flow/
+ERR: 非法操作:index
+
+[ 2016-07-22T22:51:23+08:00 ] ::1 /newshop/Home/Flow/order
+ERR: 非法操作:order
+
+[ 2016-07-22T22:51:50+08:00 ] ::1 /newshop/Home/Flow/order
+ERR: 非法操作:order
+
+[ 2016-07-22T22:56:22+08:00 ] ::1 /newshop/Home/Flow/a
+ERR: 非法操作:a
+

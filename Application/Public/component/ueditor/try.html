@@ -1,0 +1,29 @@
+<html lang="en-US">
+<head>
+
+</head>
+<body>
+
+
+<!-- 加载编辑器的容器 -->
+<script id="container" type="text/plain">
+<h1>记住当初的原点</h1>
+</script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var vconfig = {
+    toolbars: [
+        ['fullscreen', 'source', 'undo', 'redo', 'bold']
+    ],
+    autoHeightEnabled: true,
+    autoFloatEnabled: true
+};
+    var ue = UE.getEditor('container',vconfig);
+    console.log(ue);
+</script
+</body>
+</html>

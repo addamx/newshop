@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <block name="title"><title>NEWSHOP - </title></block>
+        <import type="css" file="static.home.css.style" basepath="{$Think.const.SITE_URL}/Public/" />
+        <jquery/>
+    </head>
+<body>
+<div id="banner">
+
+<div id="banner1"><h1>M - C: {$Think.const.MODULE_NAME} -- {$Think.const.CONTROLLER_NAME}</h1>	</div>
+<div id='log'><div id="person">用户登录状态: 
+	<neq name="Think.session.user" value="">
+	<div><a href="__MODULE__/User/index">个人中心</a>&nbsp;&nbsp;&nbsp;<a href="__MODULE__/User/logout"><button>退出</button></a></div>
+	<else/>
+	<div>未登录&nbsp;&nbsp;&nbsp;<a href="__MODULE__/user/login"><button>登录</button></a><a href="__MODULE__/User/register"><button>注册</button></a></div>
+	</neq>
+	</div>
+<div style="text-align:right;"><a href="__APP__/admin/manager/login">管理员后台</a></div>
+</div>
+</div>

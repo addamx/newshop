@@ -1,0 +1,59 @@
+<extend name="base" />
+
+
+<block name="main">
+
+
+<div id="main">
+<h2>用户注册</h2>
+<div id="container">
+<form action="__SELF__" method="post" content-type="application/x-www-form-urlencoded" onsubmit="return checkCapcha();">
+
+<div class="reg"><label for="username">用户名:</label><input id="username" name="username" type="text"/><span class="help-block"></span></div>
+<div class="reg"><label for="password">密码</label><input type="password" id="password" name="password"/><span class="help-block"></span></div>
+<div class="reg"><label for="repassword">再次输入</label><input type="password" id="repassword" name="repassword"/><span class="help-block"></span></div>
+<div class="reg"><label for="email">邮箱:</label><input type="text" id="email" name="email"/><span class="help-block"></span></div>
+
+<div class="reg"><label for="captcha">验证码:</label><input type="text" id="captcha" name="captcha"/><img id="captcha_img" src="__CONTROLLER__/verifyImg" onclick="chimg();"/><span class="help-block"></span></div>
+
+<div id="fbutton">
+<button type='reset' style="font-size:17px;">重置</button>
+<button type="submit" style="font-size:20px;font-weight:bold;">注册</button>
+</div>
+</form>
+</div>
+</div>
+
+<import type="css" file="static.home.css.register" basepath="{$Think.const.SITE_URL}/Public/" />
+
+
+
+<script type="text/javascript">
+
+function chimg() {
+            var img = document.getElementById('captcha_img');
+            img.src="__CONTROLLER__/verifyImg?qs="+Math.random();
+        }
+
+function checkCapcha(){
+    var dom_captcha = $("#captcha");
+    var state = '';
+    $.ajax({
+        url:"__CONTROLLER__/checkCaptcha",
+        type:"get",
+        data:{data:dom_captcha.val()}, 
+        async:false,
+        success: function(result){
+            if(result == "fail") {
+                dom_captcha.siblings(".help-block").text("验证码错误");
+                state='fail';
+                return false;
+            }
+        }
+    });
+    if (state=='fail'){
+        return false;
+    }
+}
+</script>
+</block>

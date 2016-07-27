@@ -1,0 +1,20 @@
+<include file="Public:header" />
+{//默认在当前模块Home下,所以以上解释为Home/Public/header.html}
+
+
+<block name="bread">
+<div id='bread'>
+	<ul>
+	<li><a href="__MODULE__/Index/index">首页</a></li>
+	<foreach name="breadmenu" item='v'>
+	<span>-></span>
+	<li><a href="__APP__/{$v.name}">{$v.title}</a></li>
+	</foreach>
+	</ul>
+</div>
+</block>
+
+{__CONTENT__}
+
+
+<include file="Public:footer" />
