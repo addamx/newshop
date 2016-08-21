@@ -5,7 +5,7 @@
         <title>管理中心:<?php echo (MODULE_NAME); ?>-><?php echo (CONTROLLER_NAME); ?></title>
     </head>
 <body>
-<form action="/newshop/admin/goods/add" method="post" id="aform" enctype="multipart/form-data">
+<form action="/newshop/index.php/admin/goods/add" method="post" id="aform" enctype="multipart/form-data">
 	<P><label for="name">商品名称:  </label><input type="text" id='name' name="name"/></P>
 	<p><label for="category">商品分类: </label>
 		<select name="cat_id" id="category">

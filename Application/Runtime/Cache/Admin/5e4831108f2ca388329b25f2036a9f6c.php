@@ -5,7 +5,7 @@
         <title>管理中心:<?php echo (MODULE_NAME); ?>-><?php echo (CONTROLLER_NAME); ?></title>
     </head>
 <body>
-<form action="/newshop/admin/group/add" method="post" id="aform">
+<form action="/newshop/index.php/admin/group/add" method="post" id="aform">
 	<button type='submit'>增加</button>
 	<P><label for="title">角色:  </label><input type="text" id='title' name="title"/></P>
 	<ul>

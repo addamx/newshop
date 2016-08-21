@@ -10,8 +10,8 @@
 <?php if(is_array($cats)): foreach($cats as $key=>$v): ?><tr>
 <td><?php echo ($v["id"]); ?></td>
 <td><?php echo (str_repeat('-->',$v["lev"])); echo ($v["name"]); ?></td>
-<td><a href="/newshop/Admin/Categorys/edit?id=<?php echo ($v["id"]); ?>">编辑</a></td>
-<td><a href="/newshop/Admin/Categorys/del?id=<?php echo ($v["id"]); ?>" onclick="return recheck('<?php echo ($v["name"]); ?>');">删除</a></td>
+<td><a href="/newshop/index.php/Admin/Categorys/edit?id=<?php echo ($v["id"]); ?>">编辑</a></td>
+<td><a href="/newshop/index.php/Admin/Categorys/del?id=<?php echo ($v["id"]); ?>" onclick="return recheck('<?php echo ($v["name"]); ?>');">删除</a></td>
 </tr><?php endforeach; endif; ?>
 </table>
 

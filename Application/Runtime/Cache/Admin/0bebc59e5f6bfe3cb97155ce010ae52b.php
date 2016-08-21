@@ -24,8 +24,8 @@
 <td><?php echo (date("Y/m/d",$v["register_time"])); ?></td>
 <td><?php echo ($v["last_login_ip"]); ?></td>
 <td><?php echo ($v["last_login_time"]); ?></td>
-<td><a href="/newshop/Admin/Manager/editManager?id=<?php echo ($v["id"]); ?>">编辑</a></td>
-<td><a href="/newshop/Admin/Manager/delManager?id=<?php echo ($v["id"]); ?>" onclick="return recheck('<?php echo ($v["username"]); ?>');">删除</a></td>
+<td><a href="/newshop/index.php/Admin/Manager/editManager?id=<?php echo ($v["id"]); ?>">编辑</a></td>
+<td><a href="/newshop/index.php/Admin/Manager/delManager?id=<?php echo ($v["id"]); ?>" onclick="return recheck('<?php echo ($v["username"]); ?>');">删除</a></td>
 </tr><?php endforeach; endif; ?>
 </table>
 

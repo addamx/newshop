@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>NEWSHOP -- 首页</title>
+        <link rel="stylesheet" type="text/css" href="http://devenv/newshop/Application//Public//static/home/css/style.css" />
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    </head>
+<body>
+<div id="banner">
+
+<div id="banner1"><h1>M - C: Home -- Goods</h1>	</div>
+<div id='log'><div id="person">用户登录状态: 
+		<div>未登录&nbsp;&nbsp;&nbsp;<a href="/newshop/Home/user/login"><button>登录</button></a><a href="/newshop/Home/User/register"><button>注册</button></a></div>	</div>
+<div style="text-align:right;"><a href="/newshop/admin/manager/login">管理员后台</a></div>
+</div>
+</div>
+
+
+
+
+
+<div id='bread'>
+	<ul>
+	<li><a href="/newshop/Home/Index/index">首页</a></li>
+	<span>-></span>
+	<li><a href="/newshop/home/index/category">分类栏目</a></li><span>-></span>
+	<li><a href="/newshop/home/goods/detail">商品详情</a></li>	</ul>
+</div>
+
+
+
+
+
+
+
+	<div id='nav'>
+	<ul>
+		<a href="/newshop/Home/Index/category?cid=7"><li>手机</li></a><a href="/newshop/Home/Index/category?cid=8"><li>&nbsp;&nbsp;华为</li></a><a href="/newshop/Home/Index/category?cid=9"><li>&nbsp;&nbsp;小米</li></a><a href="/newshop/Home/Index/category?cid=10"><li>&nbsp;&nbsp;三星</li></a><a href="/newshop/Home/Index/category?cid=11"><li>数码配件</li></a><a href="/newshop/Home/Index/category?cid=13"><li>ttt</li></a>	</ul>
+	</div>
+
+
+
+<div id="main" style="width:1000px;height:100%">
+<div id="detail_left">
+	<div id="goods_img"><img src="" /></div>
+	<div id="thumb_img"><img src="http://devenv/newshop/Application/Public/upload//good/2016-07-21/thumb_5790cc771f252.jpg" onclick="chimg(this);" /><img src="http://devenv/newshop/Application/Public/upload//good/2016-07-21/thumb_5790cc7729b1a.jpg" onclick="chimg(this);" /><img src="http://devenv/newshop/Application/Public/upload//good/2016-07-21/thumb_5790cc772ad3f.jpg" onclick="chimg(this);" />	</div>
+</div>
+<div id="detail_right">
+	<div id="title" style="font-size:20px;font-weight:bold;">华为 麦芒5 全网通 4GB+64GB版 香槟金 移动联通电信4G手机 双卡双待</div>
+	<div id="brief">预订用户一周左右陆续发货！光学防抖，持久续航！购机享12期白条免息！评价晒单返京豆！</div>
+	<div id="shop_price" style="font-size:20px;">2599.00</div>
+
+	<form action="/newshop/Home/Flow/add" method="get" content-type="application/x-www-form-urlencoded">
+	<div id="qty">
+		<span style="width:40px;border:1px black solid;" onclick="redQty();">&nbsp;-&nbsp;</span>
+		<input name="goods_qty" id="qty_input" type="text" value="1" style="width:20px;" />
+		<span style="width:40px;border:1px black solid;" onclick="addQty();">&nbsp;+&nbsp;</span>
+		<span>剩余库存: 1</span>
+	</div>
+	<input type="text" hidden="hidden" name="goods_id" value="19" />
+	<div id="buy"><button type="submit">购买</button></div>
+	</form>
+</div>
+<div id="goods_desc"><ul class="parameter2 p-parameter-list list-paddingleft-2" style="list-style-type: none;"><li><p>商品名称：华为麦芒5</p></li><li><p>商品编号：3234250</p></li><li><p>商品毛重：460.00g</p></li><li><p>商品产地：中国大陆</p></li><li><p>热点：双卡双待，指纹识别</p></li><li><p>运行内存：4GB</p></li><li><p>像素：1000-1600万</p></li><li><p>机身内存：64GB</p></li><li><p>系统：安卓（Android）</p></li></ul><p><img src="/newshop/Application/Public/upload/good_art/image/20160721/1469107279945924.jpg" title="1469107279945924.jpg" alt="578736a7Neff8de0b.jpg"/></p></div>
+</div>
+
+
+<script type="text/javascript" src="http://devenv/newshop/Application//Public//static/home/js/goods.js"></script>
+
+
+
+<div id="footer">
+    <p class="text" style="text-align: center;">
+        © 2016-2020 newshop 版权所有，并保留所有权利。<br />
+    </p>
+</div>
+</body>
+</html>

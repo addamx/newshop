@@ -5,7 +5,7 @@
         <title>管理中心:<?php echo (MODULE_NAME); ?>-><?php echo (CONTROLLER_NAME); ?></title>
     </head>
 <body>
-<form action="/newshop/admin/categorys/add" method="post" id="aform">
+<form action="/newshop/index.php/admin/categorys/add" method="post" id="aform">
 	<P><label for="name">栏目名:  </label><input type="text" id='name' name="name"/></P>
 	<p>
 	<label for="p_category">父栏目</label>

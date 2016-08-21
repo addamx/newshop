@@ -37,8 +37,7 @@ class IndexController extends HomeController
         //$Ip   = new \Org\Net\IpLocation('UTFWry.dat'); // 实例化类 参数表示IP地址库文件
         //$area = $Ip->getlocation('203.34.5.66'); // 获取某个IP地址所在的位置
         //$ip = get_client_ip();
-        echo __PUBLIC__;
-        $this->display();
+        testt();
 
     }
 

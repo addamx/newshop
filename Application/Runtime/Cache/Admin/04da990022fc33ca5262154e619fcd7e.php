@@ -25,7 +25,7 @@
 			</li><?php endif; endforeach; endif; ?>
 		</ul>
 	</td>
-	<td><a href="/newshop/Admin/Group/modify?id=<?php echo ($v["id"]); ?>">编辑</a></td>
-	<td><a href="/newshop/Admin/Group/del?id=<?php echo ($v["id"]); ?>">删除</a></td>
+	<td><a href="/newshop/index.php/Admin/Group/modify?id=<?php echo ($v["id"]); ?>">编辑</a></td>
+	<td><a href="/newshop/index.php/Admin/Group/del?id=<?php echo ($v["id"]); ?>">删除</a></td>
 </tr><?php endforeach; endif; ?>
 </table>

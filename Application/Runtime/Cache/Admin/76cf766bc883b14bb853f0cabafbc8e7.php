@@ -30,7 +30,7 @@
 	<td><?php echo ($v["goods_number"]); ?></td>
 	<td><?php echo (date("h:i d/m/Y",$v["add_time"])); ?></td>
 	<td><?php echo (date("h:i d/m/Y",$v["last_update"])); ?></td>
-	<td><a href="/newshop/Admin/Goods/edit?id=<?php echo ($v["id"]); ?>">编辑</a></td>
+	<td><a href="/newshop/index.php/Admin/Goods/edit?id=<?php echo ($v["id"]); ?>">编辑</a></td>
 	<td><a href="t.php" onclick="return delgood('<?php echo ($v["id"]); ?>');">删除</a></td>
 </tr><?php endforeach; endif; ?>
 <tr><td colspan="9" style="text-align: center;"><?php echo ($page); ?></td></tr>
@@ -40,7 +40,7 @@
 <script type="text/javascript">
 function delgood(id) {
 	$.ajax({
-		url: "/newshop/Admin/Goods/ajaxdel",
+		url: "/newshop/index.php/Admin/Goods/ajaxdel",
 		data: {'id':id},
 		type: 'GET',
 		dataType: "json",
@@ -56,7 +56,7 @@ function delgood(id) {
 }
 function chcat() {
 	var cat_id = $('#category').val();
-	window.location.href="/newshop/Admin/Goods/index?p=1&cat="+cat_id;
+	window.location.href="/newshop/index.php/Admin/Goods/index?p=1&cat="+cat_id;
 }
 
 </script>

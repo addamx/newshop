@@ -53,7 +53,7 @@
 	<td align=middle>当前用户：<?php echo ($_SESSION['mg_user']['username']); ?> &nbsp;&nbsp; 
         <a href="#">修改口令
         </a>
-        <a onclick="if (confirm('确定要退出吗？')) return true; else return false;" href="/newshop/Admin/Manager/logout"  target=_top>退出系统
+        <a onclick="if (confirm('确定要退出吗？')) return true; else return false;" href="/newshop/index.php/Admin/Manager/logout"  target=_top>退出系统
         </a> 
 	</td>
 	</tr>
@@ -62,13 +62,13 @@
 <div id='left'>
 <?php if(is_array($nav)): foreach($nav as $key=>$v): ?><ul>
 <li>
-<?php echo (str_repeat('&nbsp;',$v["lev"]*2)); ?><a href="/newshop/<?php echo ($v["name"]); ?>" target="right_content"/><?php echo ($v["title"]); ?></a>
+<?php echo (str_repeat('&nbsp;',$v["lev"]*2)); ?><a href="/newshop/index.php/<?php echo ($v["name"]); ?>" target="right_content"/><?php echo ($v["title"]); ?></a>
 </li>
 </ul><?php endforeach; endif; ?>
 </div>
 
 <div id='right' name='right'>
-<iframe id="content-iframe" src="/newshop/Admin/Index/welcome" frameborder="0" width="100%" height="100%" name="right_content" scrolling="auto"></iframe>
+<iframe id="content-iframe" src="/newshop/index.php/Admin/Index/welcome" frameborder="0" width="100%" height="100%" name="right_content" scrolling="auto"></iframe>
 </div>
 
 </body>

@@ -6,7 +6,7 @@
     </head>
 <body>
 <p><?php echo ($info); ?></p>
-<form action="/newshop/admin/manager/assignrole" method="post" >
+<form action="/newshop/index.php/admin/manager/assignrole" method="post" >
 	<p>
 		<label for="">管理员</label>
 		<select name="uid" id="uid">

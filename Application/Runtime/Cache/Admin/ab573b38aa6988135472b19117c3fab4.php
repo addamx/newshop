@@ -4,7 +4,7 @@
         <title>管理中心:<?php echo (MODULE_NAME); ?>-><?php echo (CONTROLLER_NAME); ?></title>
     </head>
 <body>
-<form action="/newshop/admin/manager/addmanager" method="post" onsubmit="return checkCapcha();">
+<form action="/newshop/index.php/admin/manager/addmanager" method="post" onsubmit="return checkCapcha();">
 	<p><label for="username">用户名</label>
 	<input type="text" name='username' id='username' >
 	<span class="help-block"></span></p>
@@ -26,7 +26,7 @@
 	<span class="help-block"></span></p>
 
 	<p><input type="text" name='captcha' id='captcha'>
-	<img id='captcha_img' src="/newshop/Admin/Manager/verifyImg" alt="" onclick="chimg();" />
+	<img id='captcha_img' src="/newshop/index.php/Admin/Manager/verifyImg" alt="" onclick="chimg();" />
 	<span class="help-block"></span></p>
 
 	<button type="submit" name="submit">增加</button>
@@ -36,14 +36,14 @@
 <script type="text/javascript">
 function chimg() {
             var img = document.getElementById('captcha_img');
-            img.src="/newshop/Admin/Manager/verifyImg?qs=Math.random()";
+            img.src="/newshop/index.php/Admin/Manager/verifyImg?qs=Math.random()";
         }
 
 function checkCapcha(){
     var dom_captcha = $("#captcha");
     var state = '';
     $.ajax({
-        url:"/newshop/Admin/Manager/checkCaptcha",
+        url:"/newshop/index.php/Admin/Manager/checkCaptcha",
         type:"get",
         data:{data:dom_captcha.val()}, 
         async:false,

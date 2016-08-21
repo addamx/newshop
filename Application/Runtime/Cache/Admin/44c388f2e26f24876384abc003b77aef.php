@@ -6,13 +6,13 @@
     </head>
     <body>
     <div class='warn' id='loginfo'><?php echo ($info); ?></div>
-    <form action="/newshop/admin/manager/login" method="post" onsubmit="return checkCaptcha();">
+    <form action="/newshop/index.php/Admin/Manager/login.html" method="post" onsubmit="return checkCaptcha();">
 
         <p>用户名:<input name='username' id="username" type="text" /><span class="help-block"></span></p>
         
         <p>密码:<input name='password' id="password" type="password" /><span class="help-block"></span></p>
         
-        <p>验证码<input name='captcha' id="captcha" type="text" /><img id='captcha_img' src="/newshop/Admin/Manager/verifyImg" alt="" onclick="chimg();" /><span class="help-block"></span></p>
+        <p>验证码<input name='captcha' id="captcha" type="text" /><img id='captcha_img' src="/newshop/index.php/Admin/Manager/verifyImg" alt="" onclick="chimg();" /><span class="help-block"></span></p>
         
         
         <button type='submit' name='submit' >登录</button>
@@ -57,7 +57,7 @@
 
         function chimg() {
             var img = document.getElementById('captcha_img');
-            img.src="/newshop/Admin/Manager/verifyImg?qs=Math_random()";
+            img.src="/newshop/index.php/Admin/Manager/verifyImg?qs=Math_random()";
         }
 
         
@@ -65,7 +65,7 @@
             var dom_captcha = $("#captcha");
             var state = '';
             $.ajax({
-                url:"/newshop/Admin/Manager/checkCaptcha",
+                url:"/newshop/index.php/Admin/Manager/checkCaptcha",
                 type:"get",
                 data:{data:dom_captcha.val()}, 
                 async:false,
