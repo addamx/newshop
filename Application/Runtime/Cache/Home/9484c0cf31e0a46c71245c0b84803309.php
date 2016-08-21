@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>NEWSHOP -- 首页</title>
+        <title>NEWSHOP - </title>
         <link rel="stylesheet" type="text/css" href="<?php echo (SITE_URL); ?>/Public//static/home/css/style.css" />
         <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
     </head>
@@ -37,38 +37,40 @@
 
 
 
-	<div id='nav'>
-	<ul>
-		<?php if(is_array($goodcates)): foreach($goodcates as $key=>$v): ?><a href="/newshop/Index.php/Home/Index/category?cid=<?php echo ($v["id"]); ?>"><li <?php if(($cid) == $v["id"]): ?>style="background-color:yellow;"<?php endif; ?>><?php echo (str_repeat("&nbsp;",$v["lev"]*2)); echo ($v["name"]); ?></li></a><?php endforeach; endif; ?>
-	</ul>
-	</div>
+<link rel="stylesheet" type="text/css" href="<?php echo (SITE_URL); ?>/Public//static/home/css/userindex.css" />
 
-
-
-<div id="main">
-	<div id="newlist" class="goodslist">
-	<p>新品促销中....</p>
-		<?php if(is_array($newlist)): foreach($newlist as $key=>$v): ?><div class="good newgood">
-				<img src="<?php echo (UPLOAD_URL); echo explode(',', $v['goods_img'])[0]; ?>">
-				<div><a href="/newshop/Index.php/Home/goods/detail?gid=<?php echo ($v["id"]); ?>"><?php echo ($v["name"]); ?></a></div>
-				<div>[新品]<span> ¥<?php echo ($v["shop_price"]); ?>&nbsp;&nbsp;<a href="/newshop/Index.php/Home/Flow/add?goods_id=<?php echo ($v["id"]); ?>">购买</a></span></div>
-			</div><?php endforeach; endif; ?>
-	</div>
-	<div id="hotlist" class="goodslist">
-	<p>热销中....</p>
-		<?php if(is_array($hotlist)): foreach($hotlist as $key=>$vv): ?><div class="good newgood">
-				<img src="<?php echo (UPLOAD_URL); echo explode(',', $vv['goods_img'])[0]; ?>">
-				<div><a href="/newshop/Index.php/Home/goods/detail?gid=<?php echo ($vv["id"]); ?>"><?php echo ($vv["name"]); ?></a></div>
-				<div>[热销]<span>&nbsp;&nbsp;¥<?php echo ($vv["shop_price"]); ?>&nbsp;&nbsp;<a href="/newshop/Index.php/Home/Flow/add?goods_id=<?php echo ($vv["id"]); ?>">购买</a></span></div>
-			</div><?php endforeach; endif; ?>
-	</div>
+<div id="left">
+<p>功能中心</p>
 </div>
 
+<block name="main">
+<div id="main">
+<table>
+<tr>
+	<th>订单号</th>
+	<th>姓名</th>
+	<th>手机号码</th>
+	<th>地址</th>
+	<th>支付方式</th>
+	<th>备注</th>
+	<th>总价</th>
+	<th>下单时间</th>
+	<th>支付状态</th>
+</tr>
+<?php if(is_array($list)): foreach($list as $key=>$v): ?><tr>
+<td><?php echo ($v["ord_sn"]); ?></td>
+<td><?php echo ($v["xm"]); ?></td>
+<td><?php echo ($v["mobile"]); ?></td>
+<td><?php echo ($v["address"]); ?></td>
+<td><?php if(($v["paytype"]) == "1"): ?><span>在线支付</span><?php else: ?><span>货到付款</span><?php endif; ?></td>
+<td><?php echo ($v["note"]); ?></td>
+<td><?php echo ($v["money"]); ?></td>
+<td><?php echo (date("Y/m/d",$v["ordtime"])); ?></td>
+<td><?php if(($v["paystatus"]) == "0"): ?><span>未支付</span><a href="">去支付</a><?php else: ?><span>已支付</span><?php endif; ?></td>
+</tr><?php endforeach; endif; ?>
+</table>
+</div>
 
-
-	<div id='right'>
-		<?php echo W('Ad/aw');?>
-	</div>
 
 
 

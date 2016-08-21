@@ -29,8 +29,7 @@ class UserController extends HomeController
     public function register()
     {
         if (IS_POST) {
-            $post = I('post.');
-            var_dump($post);
+            $post       = I('post.');
             $user_model = D('Users');
             if (!$user_model->create()) {
                 $this->exError($user_model->getError(), '', 10);
