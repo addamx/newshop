@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv=content-type content="text/html; charset=utf-8" />
-        <title>管理中心:{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
-    </head>
-<body>
+<layout name="Public/layout" />
+
+
 <p><label for="category">商品分类: </label>
 	<select name="cat_id" id="category" onchange='chcat();'>
 		<option value="0" <eq name='cat' value='0'>selected='selected'</eq>>无</option>
@@ -13,7 +9,8 @@
 		</foreach>
 	</select>
 </p>
-<table border='1'>
+
+<table class="table table-border table-hover table-condensed">
 <tr>
 	<th>商品名</th>
 	<th>序号</th>
@@ -40,7 +37,6 @@
 <tr><td colspan="9" style="text-align: center;">{$page}</td></tr>
 </table>
 
-<jquery/>
 <script type="text/javascript">
 function delgood(id) {
 	$.ajax({
@@ -64,5 +60,3 @@ function chcat() {
 }
 
 </script>
-</body>
-</html>

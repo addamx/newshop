@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv=content-type content="text/html; charset=utf-8" />
-        <title>管理中心:{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
-    </head>
-<body>
-<form action="__SELF__" method="post" id="aform">
-	<P><label for="name">栏目名:  </label><input type="text" id='name' name="name"/></P>
-	<p>
-	<label for="p_category">父栏目</label>
-	<select name="pid" id="p_category">
+<layout name="Public/layout" />
+
+
+<form class="col-md-4" action="__SELF__" method="post" content-type="application/x-www-form-urlencoded">
+	<div class="form-group">
+		<label class="control-label" for="name">栏目名:  </label><input class="form-control" type="text" id='name' name="name" />
+	</div>
+	<div class="form-group">
+		<label class="control-label" for="p_category">父栏目</label>
+	<select class="form-control" name="pid" id="p_category">
 		<option value="0">无</option>
 		<foreach name="categorys" item="v">
-		<option value="{$v.id}">{$v.lev|str_repeat="&nbsp;",###*4}{$v.name}</option>
+			<!--disabled本栏目及其子孙栏目-->
+			<option value="{$v.id}">
+				{$v.lev|str_repeat="&nbsp;",###*4}{$v.name}
+			</option>
 		</foreach>
 	</select>
-	</p>
-	<p><textarea name="intro" id="" cols="30" rows="10"></textarea></p>
-	<button type='submit'>增加</button>
-</form>
+	</div>
 
-</body>
-</html>
+		<textarea class="form-control" name="intro" id="" cols="30" rows="10">{$info.intro}</textarea>
+
+	<button class="btn btn-primary" type='submit'>增加</button>
+</form>

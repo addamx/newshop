@@ -1,9 +1,9 @@
 <layout name="Public/layout" />
-{// 默认在模块Home下寻址, 所以如果要为某控制器设置独立的layout, 则设置为 "[控制器\]layout"}
 
 
-
+<div id="main" class="main row">
 <block name='main'></block>
+</div>
 
-<import type="css" file="static.home.css.flow" basepath="{$Think.const.SITE_URL}/Public/" />
 <import type="js" file="static.home.js.flow" basepath="{$Think.const.SITE_URL}/Public/" />
+<import type="css" file="static.home.css.flow" basepath="{$Think.const.SITE_URL}/Public/" />

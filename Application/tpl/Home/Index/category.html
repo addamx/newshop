@@ -1,14 +1,21 @@
 <extend name="base" />
-<block name="title"><title>NEWSHOP -- 首页</title></block>
+<block name="title"><title>NEWSHOP -- 商品栏目</title></block>
 
 <block name="main">
 <div id="main">
-	<div id="cat_goods" class="">
+	<div id="cat_goods" class="row">
 		<foreach name='cat_goods' item='v'>
-			<div class="good">
-				<img src="{$Think.const.UPLOAD_URL}<php>echo explode(',', $v['goods_img'])[0];</php>">
-				<div><a href="__MODULE__/goods/detail?gid={$v.id}">{$v.name}</a></div>
-				<div>[新品]<span> ¥{$v.shop_price}&nbsp;&nbsp;<a href="__MODULE__/Flow/add?goods_id={$v.id}">购买</a></span></div>
+			<div class="good col-md-3">
+				<img class="img-thumbnail img-responsive" src="{$Think.const.UPLOAD_URL}<php>echo explode(',', $v['goods_img'])[0];</php>">
+				<div class="intro"><eq name="v.is_new" value="1">
+					<span class="label label-primary">[新品]</span>
+				</eq>
+				<eq name="v.is_hot" value="1">
+					<span class="label label-danger">[热销]</span>
+				</eq><a href="__MODULE__/goods/detail?gid={$v.id}">{$v.name}</a></div>
+				<div>
+				
+				<span> ¥{$v.shop_price}&nbsp;&nbsp;<a href="__MODULE__/Flow/add?goods_id={$v.id}"><button class="btn btn-default">购买</button></a></span></div>
 			</div>
 		</foreach>
 	</div>

@@ -1,30 +1,63 @@
 <extend name="base" />
-<block name="title"><title>NEWSHOP -- 首页</title></block>
+<block name="title"><title>商品详情 -- NEWSHOP</title></block>
 
 <block name="main">
-<div id="main" style="width:1000px;height:100%">
-<div id="detail_left">
-	<div id="goods_img"><img src="" /></div>
-	<div id="thumb_img"><foreach name="info.thumb_img" item="v"><img src="{$Think.const.UPLOAD_URL}/{$v}" onclick="chimg(this);" />
+<div class="row">
+
+<div id="detail_left" class="col-md-6">
+	<center><div id="goods_img"><img src="" /></div>
+	<div id="thumb_img"><foreach name="info.thumb_img" item="v"><img class="img-thumbnail img-responsive" src="{$Think.const.UPLOAD_URL}/{$v}" onmouseover="chimg(this);" />
 		</foreach>
-	</div>
+	</div></center>
 </div>
-<div id="detail_right">
-	<div id="title" style="font-size:20px;font-weight:bold;">{$info.name}</div>
-	<div id="brief">{$info.brief}</div>
-	<div id="shop_price" style="font-size:20px;">{$info.shop_price}</div>
+
+<div id="detail_right" class="col-md-6">
+	<h3 id="title">{$info.name}</h3>
+	<p id="brief">{$info.brief}</p>
+	
 
 	<form action="__MODULE__/Flow/add" method="get" content-type="application/x-www-form-urlencoded">
+	<div id="shop_price" style="font-size:20px;">￥{$info.shop_price}</div>
 	<div id="qty">
-		<span style="width:40px;border:1px black solid;" onclick="redQty();">&nbsp;-&nbsp;</span>
+		<span class="glyphicon glyphicon-minus" aria-hidden="true" onclick="redQty();"></span>
 		<input name="goods_qty" id="qty_input" type="text" value="1" style="width:20px;" />
-		<span style="width:40px;border:1px black solid;" onclick="addQty();">&nbsp;+&nbsp;</span>
+		<span class="glyphicon glyphicon-plus" aria-hidden="true" onclick="addQty();"></span>
 		<span>剩余库存: {$info.goods_number}</span>
 	</div>
 	<input type="text" hidden="hidden" name="goods_id" value="{$info.id}" />
-	<div id="buy"><button type="submit">购买</button></div>
+	<div id="buy"><button class="btn btn-default" type="submit">购买</button></div>
 	</form>
 </div>
-<div id="goods_desc">{$info.goods_desc|html_entity_decode|htmlspecialchars_decode}</div>
 </div>
+
+<div class="row" id="goods_desc">{$info.goods_desc|html_entity_decode|htmlspecialchars_decode}</
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var vs = document.getElementById('thumb_img').firstChild;
+	chimg(vs);
+
+});
+
+function chimg(v) {
+	var src = v.src.replace(/thumb/, "goods");
+	document.getElementById('goods_img').firstChild.src=src;
+}
+
+function addQty() {
+	var qty = document.getElementById('qty_input');
+	qty.value = parseInt(qty.value) + 1;
+}
+
+function redQty() {
+	var qty = document.getElementById('qty_input');
+	if (qty.value != '0') {
+		qty.value = parseInt(qty.value) - 1;
+	}
+	
+}
+</script>
+
 </block>

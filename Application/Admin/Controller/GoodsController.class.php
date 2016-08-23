@@ -12,6 +12,7 @@ class GoodsController extends AdminController
 
         $sql      = $good_model->order('add_time desc')->page($p . ',5');
         $cat_sons = $catsModel->getCatTree($catsModel->select(), $cat);
+        $cats_str = '';
         foreach ($cat_sons as $value) {
             $cats_str .= $value['id'] . ',';
         }
@@ -19,8 +20,9 @@ class GoodsController extends AdminController
 
         $this->assign('list', $list); // 赋值数据集
         $count = $good_model->count(); // 查询满足要求的总记录数
-        $Page  = new \Think\Page($count, 5); // 实例化分页类 传入总记录数和每页显示的记录数
-        $show  = $Page->show(); // 分页显示输出
+
+        $Page = new \Think\Page($count, 5); // 实例化分页类 传入总记录数和每页显示的记录数
+        $show = $Page->show(); // 分页显示输出
         $this->assign('page', $show); // 赋值分页输出
 
         $cats = $catsModel->getCatTree($catsModel->select());

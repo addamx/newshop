@@ -1,17 +1,24 @@
 <layout name="Public/layout" />
-{// 默认在模块Home下寻址, 所以如果要为某控制器设置独立的layout, 则设置为 "[控制器\]layout"}
 
 
-<block name='nav'>
-	<div id='nav'>
-	<ul>
+
+<div class="container-fluid">
+ <div class="row">
+    <div id="cat-nav" class="col-md-2 sidebar">
+		
+		<ul class="nav nav-sidebar">
 		<foreach name="goodcates" item="v">
-		<a href="__MODULE__/Index/category?cid={$v.id}"><li>{$v.lev|str_repeat="&nbsp;",###*2}{$v.name}</li></a>
+			<li><a href="__MODULE__/Index/category?cid={$v.id}">{$v.lev|str_repeat="&nbsp;",###*6}{$v.name}</a></li>			
 		</foreach>
-	</ul>
+		</ul>
+    </div>
+
+    <div id="main" class="col-md-10 col-md-offset-0 main">
+		<block name='main'></block>
 	</div>
-</block>
+    
 
-<block name='main'></block>
 
-<import type="js" file="static.home.js.goods" basepath="{$Think.const.SITE_URL}/Public/" />
+ </div><!--container row-->
+</div><!--container-fluid-->
+<import type="css" file="static.home.css.good" basepath="{$Think.const.SITE_URL}/Public/" />

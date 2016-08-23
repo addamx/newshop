@@ -15,7 +15,7 @@ define('TMPL_PATH', APP_PATH . 'tpl/');
 
 define("UPLOAD_PATH", APP_PATH . "Public/upload/");
 
-define("SITE_URL", "http://devenv/newshop/Application/");
+define("SITE_URL", "http://" . $_SERVER["HTTP_HOST"] . "/newshop/Application/");
 define("UPLOAD_URL", SITE_URL . "Public/upload/");
 
 //define('BIND_MODULE', 'Admin');

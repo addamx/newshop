@@ -1,8 +1,9 @@
 <extend name="base" />
 
 <block name="main">
-<div id="main">
-<table>
+
+
+<table class="table table-bordered table-hover">
 <tr>
 	<th><input type="checkbox" selected="selected"></input>全选</th>
 	<th colspan="2">商品</th>
@@ -19,11 +20,11 @@
 	<td>{$v.name}</td>
 	<td>{$v.shop_price}</td><td><a id="dec{$v.id}" style="width:40px;border:1px black solid;" onclick="decQty(this.id);">&nbsp;-&nbsp;</a><input class="num" name="info[{$v.id}][num]" id="qty_input{$v.id}" type="text" value="{$v.num}" style="width:20px;" onchange="createOB(this);"/><a id="add{$v.id}" style="width:40px;border:1px black solid;" onclick="addQty(this.id);">&nbsp;+&nbsp;</a></td><td><span></span>
 	</td>
-	<td><a href="">删除</a><input type="text" hidden="hidden" name="info[{$v.id}][id]" value="{$v.id}"/></td>
+	<td><a href="javascript:void(0);">删除</a><input type="text" hidden="hidden" name="info[{$v.id}][id]" value="{$v.id}"/></td>
 </tr>
 </foreach>
 </table>
 <button type="submit" style="float:right;">去结算</button>
 </form>
-</div>
+
 </block>

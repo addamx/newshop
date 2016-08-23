@@ -1,0 +1,42 @@
+.good {
+	margin-left: 20px;
+	margin-bottom: 20px;
+	height: 300px;
+	border: solid #F8F8F8;
+}
+.good .intro {
+	height: 100px;
+}
+
+.goodslist {
+	margin-bottom: 30px;
+}
+
+#goods_img img{
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+
+#detail_right {
+	height: 480px;
+	position:relative;
+	text-align: center;
+}
+#detail_right form{
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	padding: 30px;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+#detail_right form *{
+	margin-bottom: 15px;
+}
+
+#goods_desc {
+	margin-top: 50px;
+}

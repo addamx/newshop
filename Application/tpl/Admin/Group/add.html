@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv=content-type content="text/html; charset=utf-8" />
-        <title>管理中心:{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
-    </head>
-<body>
-<form action="__SELF__" method="post" id="aform">
-	<button type='submit'>增加</button>
-	<P><label for="title">角色:  </label><input type="text" id='title' name="title"/></P>
+<layout name="Public/layout" />
+
+
+<form class="form-horizontal" action="__SELF__" method="post" id="aform" content-type="application/x-www-form-urlencoded">
+	<button class="btn btn-primary" type='submit' onclick="ajaxmodify();return false;">增加</button>
+
+	<div class="form-group">
+	<label class="col-sm-3 control-label" for="title">角色:</label>
+	<div class="col-sm-3">
+	<input class="form-control" type="text" id='title' name="title"/>
+	</div>
+	</div>
 	<ul>
 	<foreach name="rule_list" item='r'>
 	<eq name="r.pid" value="0">
-		<li>{$r.title}<input type="checkbox" name="rules[]" value="{$r.id}" />
+		<li><div class="checkbox"><label><input class="ptitle" type="checkbox" name="rules[]" id="cb{$r.id}" value="{$r.id}" onclick="selectAll(this);"/>{$r.title}</label></div>
 			<ul>
 			<foreach name="rule_list" item='rr'>
 			<eq name="rr.pid" value="$r.id">
-				<li>{$rr.title}<input type="checkbox" name="rules[]" value="{$rr.id}" />
+				<li><div class="checkbox"><label><input class="stitle" type="checkbox" name="rules[]" value="{$rr.id}"/>{$rr.title}</label></div>
 				</li>
 			</eq>
 			</foreach>
@@ -23,8 +25,18 @@
 		</li>
 	</eq>
 	</foreach>
-	</ul>
+	</ul>	
 </form>
 
-</body>
-</html>
+<style type="text/css">
+	.control-label {
+		width:150px;
+	}
+	ul{
+		list-style-type:none;
+	}
+</style>
+<script type="text/javascript">
+
+		
+</script>

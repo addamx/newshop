@@ -13,8 +13,7 @@ class IndexController extends HomeController
         $this->assign('hotlist', $hotlist);
         $this->assign('newlist', $newlist);
 
-        $this->assign('goodcates', $this->exGoodCates());
-
+        //var_dump($this->exGoodCates());
         $this->display();
     }
 
@@ -58,7 +57,6 @@ class IndexController extends HomeController
         $this->assign('cat_goods', $goods);
 
         $this->assign('cid', I('get.cid'));
-        $this->assign('goodcates', $this->exGoodCates());
 
         $this->display();
     }

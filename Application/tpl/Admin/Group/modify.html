@@ -1,24 +1,25 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv=content-type content="text/html; charset=utf-8" />
-        <title>管理中心:{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
-    </head>
-<body>
+<layout name="Public/layout" />
 <p id='info'></p>
-<form action="__CONTROLLER__/ajaxmodify" method="post" id="aform">
-	<button type='submit' onclick="ajaxmodify();return false;">修改</button>
-	<p>ID: {$group.id}</p>
+
+<form class="form-horizontal" action="__CONTROLLER__/ajaxmodify" method="post" id="aform" content-type="application/x-www-form-urlencoded">
+	<button class="btn btn-primary" type='submit' onclick="ajaxmodify();return false;">修改</button>
+	<h4>ID: {$group.id}</h4>
 	<input type='text' hidden name='id' value="{$group.id}"/>
-	<P><label for="title">角色:  </label><input type="text" id='title' name="title" value="{$group.title}"/></P>
+
+	<div class="form-group">
+	<label class="col-sm-3 control-label" for="title">角色:</label>
+	<div class="col-sm-3">
+	<input class="form-control" type="text" id='title' name="title" value="{$group.title}"/>
+	</div>
+	</div>
 	<ul>
 	<foreach name="rule_list" item='r'>
 	<eq name="r.pid" value="0">
-		<li>{$r.title}<input type="checkbox" name="rules[]" value="{$r.id}" <in name="r.id" value="$group.rules">checked="checked"</in> />
+		<li><div class="checkbox"><label><input type="checkbox" name="rules[]" value="{$r.id}" <in name="r.id" value="$group.rules">checked="checked"</in> />{$r.title}</label></div>
 			<ul>
 			<foreach name="rule_list" item='rr'>
 			<eq name="rr.pid" value="$r.id">
-				<li>{$rr.title}<input type="checkbox" name="rules[]" value="{$rr.id}" <in name="rr.id" value="$group.rules">checked="checked"</in> />
+				<li><div class="checkbox"><label><input type="checkbox" name="rules[]" value="{$rr.id}" <in name="rr.id" value="$group.rules">checked="checked"</in> />{$rr.title}</label></div>
 				</li>
 			</eq>
 			</foreach>
@@ -26,10 +27,9 @@
 		</li>
 	</eq>
 	</foreach>
-	</ul>
-	
+	</ul>	
 </form>
-<jquery/>
+
 <script type="text/javascript">
 function ajaxmodify() {
 	var vdata = $("#aform").serialize();
@@ -45,5 +45,11 @@ function ajaxmodify() {
 }
 
 </script>
-</body>
-</html>
+<style type="text/css">
+	.control-label {
+		width:150px;
+	}
+	ul{
+		list-style-type:none;
+	}
+</style>

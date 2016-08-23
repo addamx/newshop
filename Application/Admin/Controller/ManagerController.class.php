@@ -38,12 +38,15 @@ class ManagerController extends AdminController
 
             }
         }
+        if (session("?mg_user")) {
+            $this->redirect('Index/index', '', 1, '已登录');
+        }
         $this->display();
     }
 
     public function logout()
     {
-        session(null);
+        session('mg_user', null);
         $this->redirect('login');
     }
 

@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv=content-type content="text/html; charset=utf-8" />
-        <title>管理中心:{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
-    </head>
-<body>
-<table border="1">
+<layout name="Public/layout" />
+
+<table border="1" class="table table-bordered col-md-6">
 <tr>
 <th>Id</th>
 <th>Username</th>
@@ -31,7 +26,7 @@
 </foreach>
 </table>
 
-<jquery/>
+
 <script type="text/javascript">
 function recheck(name) {
 	if(!confirm("确定要删除"+name+"管理员么?")){return false;};
@@ -39,7 +34,4 @@ function recheck(name) {
 
 </script>
 
-
-</body>
-</html>
 

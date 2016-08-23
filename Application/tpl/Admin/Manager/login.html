@@ -2,23 +2,76 @@
 <html>
     <head>
         <meta http-equiv=content-type content="text/html; charset=utf-8" />
-        <title>{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
+        <title>后台登录 -- NEWSHOP</title>
+        <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet">
+        <jquery/>
+        <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.js"></script>
     </head>
     <body>
-    <div class='warn' id='loginfo'>{$info}</div>
-    <p>u:addams p:123456</p>
-    <form action="__SELF__" method="post" onsubmit="return checkCaptcha();">
 
-        <p>用户名:<input name='username' id="username" type="text" /><span class="help-block"></span></p>
-        
-        <p>密码:<input name='password' id="password" type="password" /><span class="help-block"></span></p>
-        
-        <p>验证码<input name='captcha' id="captcha" type="text" /><img id='captcha_img' src="__CONTROLLER__/verifyImg" alt="" onclick="chimg();" /><span class="help-block"></span></p>
-        
-        
-        <button type='submit' name='submit' >登录</button>
-    </form>
-    <jquery/>
+
+<nav id="nav-admin" class="navbar navbar-inverse">
+<div class="container-fluid">
+
+    <div id="person">
+        <neq name="Think.session.mg_user" value="">
+            <p class="navbar-text"><a class="navbar-link navbar-left" href="__MODULE__/User/index">{$Think.session.mg_user.username}个人中心</a></p><a class="navbar-link navbar-left" href="__MODULE__/manager/logout"><button class="btn btn-default navbar-btn navbar-left btn-xs">退出</button></a>
+        <else/>
+            <div><p class="navbar-text navbar-left"><a class="navbar-link navbar-left" href="__APP__/Home/Index/index">商城主页</a></p></div>
+        </neq>
+    </div>
+</div>
+</nav>
+
+
+<div class="col-md-offset-4 col-md-4" style="margin-top:50px">
+<p class='warn' id='loginfo'><defined name="info">{$info}<else/>u: addams, p: 123456</defined></p>
+ <form class="form-horizontal" action="__SELF__" method="post" content-type="application/x-www-form-urlencoded" onsubmit="return checkCapcha();">
+      <div class="form-group">
+        <label for="username" class="col-sm-3 control-label">用户名:</label>
+        <div class="col-sm-9">
+          <input name="username" type="text" class="form-control" id="username">
+          <span class="help-block"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-sm-3 control-label">密码:</label>
+        <div class="col-sm-9">
+          <input name="password" type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          <span class="help-block"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="captcha" class="col-sm-3 control-label">验证码:</label>
+        <div class="col-sm-9 input-group">
+          <input name="captcha" id="captcha" type="text" class="form-control" id="captcha" style="margin-left:15px">
+          <span class="input-group-btn">
+          <img id="captcha_img" src="__CONTROLLER__/verifyImg" onclick="chimg();">
+          </span>
+          <span class="help-block"></span>
+          
+        </div>
+      </div>
+      <div class="form-group"><p class="col-sm-offset-3" id="captcha-status"></p></div>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="remember"> Remember me
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-11">
+          <button type="submit" class="btn btn-default btn-primary" style="width:100%;margin:0">Sign in</button>
+        </div>
+      </div>
+</form>
+
+</div>
+
+
     <script type='text/javascript'>
         $(document).ready(function() {
             var dom_user = $("#username");

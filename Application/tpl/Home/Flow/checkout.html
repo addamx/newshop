@@ -2,24 +2,30 @@
 
 <block name="main">
 
-<div id="main">
-<div id="rec">
-<form action="__CONTROLLER__/done" method="post" content-type="application/x-www-form-urlencoded">
-<div><label for="xm">收货人姓名: </label><input id="xm" name="xm" type="text"></div>
-<div><label for="mobile">手机号码: </label><input id="mobile" name="mobile" type="text"></div>
-<div><label for="address">具体地址: </label><input id="address" name="address" type="text"></div>
-<div><label for="paytype">支付方式: </label><select name="paytype" id="paytype">
+<div class="row">
+<div id="rec" class="col-md-offset-4 col-md-4">
+
+
+<form  class="form-horizontal" action="__CONTROLLER__/done" method="post" content-type="application/x-www-form-urlencoded">
+<div class="form-group"><label class="col-sm-3 control-label" for="xm">收货人姓名: </label><div class="col-sm-9"><input class="form-control" id="xm" name="xm" type="text"></div></div>
+<div class="form-group"><label class="col-sm-3 control-label" for="mobile">手机号码: </label><div class="col-sm-9"><input class="form-control" id="mobile" name="mobile" type="text"></div></div>
+<div class="form-group"><label class="col-sm-3 control-label" for="address">具体地址: </label><div class="col-sm-9"><input class="form-control" id="address" name="address" type="text"></div></div>
+<div class="form-group"><label class="col-sm-3 control-label" for="paytype">支付方式: </label><div class="col-sm-9"><select class="form-control" name="paytype" id="paytype">
 	<option value="1">在线支付</option>
 	<option value="2">货到付款</option>
-</select></div>
-<div><label for="note">备注(20字符内): </label><textarea id="note" name="note"></textarea></div>
-
-<button type="submit">提交</button>
+</select></div></div>
+<div class="form-group"><label class="col-sm-3 control-label" for="note">备注(20字符内): </label><div class="col-sm-9"><textarea class="form-control" id="note" name="note"></textarea></div></div>
+<center><button class="btn btn-primary" type="submit">提交</button></center>
 </form>
+
 </div>
-<div id="cart">
+</div>
+
+
+<div id="cart" class="row">
 <h2 id="ttl">总价: {$ttl}</h2>
-<table>
+
+<table class="table table-hover table-bordered">
 <tr>
 	<th colspan="2">商品</th>
 	<th>单价(元)</th>
@@ -35,5 +41,6 @@
 </foreach>
 </table>
 </div>
-</div>
+
+
 </block>

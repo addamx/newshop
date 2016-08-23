@@ -1,38 +1,50 @@
-<html>
-    <head>
-        <meta http-equiv=content-type content="text/html; charset=utf-8" />
-        <title>管理中心:{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
-    </head>
-<body>
-<form action="__SELF__" method="post" onsubmit="return checkCapcha();">
-	<p><label for="username">用户名</label>
-	<input type="text" name='username' id='username' value="{$info.username}">
-	<span class="help-block"></span></p>
+<layout name="Public/layout" />
 
-	<p><label for="password">修改密码</label>
-	<input type="password" name='password' id='password' value="{$info.password}">
-	<span class="help-block"></span></p>
+<form class="form-horizontal col-md-4" action="__SELF__" method="post" content-type="application/x-www-form-urlencoded" onsubmit="return checkCapcha();">
 
-	<p><label for="repassword">确认密码</label>
-	<input type="password" name='repassword' id='repassword' value="">
-	<span class="help-block"></span></p>
+    <div class="form-group">
+    <label class="col-sm-3 control-label" for="username">用户名</label>
+    <div class="col-sm-9">
+    <input class="form-control" type="text" name='username' id='username' value="{$info.username}">
+    <span class="help-block"></span></div></div>
 
-	<p><label for="email">邮箱</label>
-	<input type="text" name='email' id='email' value="{$info.email}">
-	<span class="help-block"></span></p>
+    <div class="form-group">
+    <label class="col-sm-3 control-label" for="password">密码</label>
+    <div class="col-sm-9">
+    <input class="form-control" type="password" name='password' id='password' >
+    <span class="help-block"></span></div></div>
 
-	<p><label for="phone">手机号码</label>
-	<input type="text" name='phone' id='phone' value="{$info.phone}">
-	<span class="help-block"></span></p>
+    <div class="form-group">
+    <label class="col-sm-3 control-label" for="repassword">确认密码</label>
+    <div class="col-sm-9">
+    <input class="form-control" type="password" name='repassword' id='repassword' >
+    <span class="help-block"></span></div></div>
 
-	<p><input type="text" name='captcha' id='captcha'>
-	<img id='captcha_img' src="__CONTROLLER__/verifyImg" alt="" onclick="chimg();" />
-	<span class="help-block"></span></p>
-	<input type="text" name="id" hidden id="{$info.id}", value="{$info.id}">
-	<button type="submit" name="submit">修改</button>
+    <div class="form-group">
+    <label class="col-sm-3 control-label" for="email">邮箱</label>
+    <div class="col-sm-9">
+    <input class="form-control" type="text" name='email' id='email' value="{$info.email}">
+    <span class="help-block"></span></div></div>
+
+    <div class="form-group">
+    <label class="col-sm-3 control-label" for="phone">手机号码</label>
+    <div class="col-sm-9">
+    <input class="form-control" type="text" name='phone' id='phone' value="{$info.phone}">
+    <span class="help-block"></span></div></div>
+
+    <div class="form-group">
+    <label class="col-sm-3 control-label" for="captcha">验证码:</label>
+    <div class="col-sm-9 input-group"><input class="form-control" type="text" name='captcha' id='captcha'>
+    <span class="input-group-btn">
+    <img id='captcha_img' src="__CONTROLLER__/verifyImg" alt="" onclick="chimg();" />
+    <span class="help-block"></span></span></div></div>
+    <input type="text" name="id" hidden id="{$info.id}", value="{$info.id}">
+
+    <button class="btn btn-default" type="reset">重置</button>
+    <button class="btn btn-primary" type="submit" name="submit">增加</button>
 </form>
 
-<jquery/>
+
 <script type="text/javascript">
 function chimg() {
             var img = document.getElementById('captcha_img');

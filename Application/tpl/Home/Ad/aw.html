@@ -1,6 +1,10 @@
-<ul>
-	<p>Ad Widget</p>
-	<foreach name="list" item="v">
-	<li><a href="{$v.link}">{$v.title}</a></li>
-	</foreach>
-</ul>
+<div class="panel panel-primary">
+	<div class="panel-heading">Ad Widget</div>
+   <div class="panel-body">
+   	<ul>
+   		<foreach name="list" item="v">
+   		<a href="{$v.link}"><li>{$v.title}</li></a>
+   		</foreach>
+		</ul>
+	</div>
+</div>

@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv=content-type content="text/html; charset=utf-8" />
-        <title>管理中心:{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
-    </head>
-<body>
-<table border="1" width="60%">
+<layout name="Public/layout" />
+
+<div class="row">
+<table class="col-sm-4 table table-bordered" style="margin-left:30px;width: 40%">
 <tr><th>ID</th><th>栏目名</th><th colspan='2'>操作</th></tr>
 <foreach name='cats' item='v'>
 <tr>
@@ -16,12 +12,10 @@
 </tr>
 </foreach>
 </table>
+</div>
 
 <script type="text/javascript">
 function recheck(name) {
 	if(!confirm("确定要删除栏目["+name+"]么?")){return false;};
 }
 </script>
-
-</body>
-</html>

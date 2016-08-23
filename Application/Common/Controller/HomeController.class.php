@@ -15,7 +15,9 @@ class HomeController extends BaseController
         if ($breadmenu) {
             $this->assign('breadmenu', $breadmenu);
         }
+
         //var_dump($breadmenu);
+        $this->assign('goodcates', $this->exGoodCates());
     }
 
     protected function exGoodCates($cid = '0')
@@ -31,6 +33,16 @@ class HomeController extends BaseController
             $info = $cats_model->find($cid);
             array_unshift($cate_list, $info); //getCatTree 不会包括本身
         }
+
+        // $_cid = -1;
+        // foreach ($cate_list as $key => $value) {
+        //     $cate_list[$key]['hvson'] = false;
+
+        //     if ($value['pid'] == $_cid) {
+        //         $cate_list[$key - 1]['hvson'] = true;
+        //     }
+        //     $_cid = $value['id'];
+        // }
 
         return $cate_list;
     }

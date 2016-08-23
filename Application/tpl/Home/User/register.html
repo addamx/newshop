@@ -4,24 +4,24 @@
 <block name="main">
 
 
-<div id="main">
-<h2>用户注册</h2>
-<div id="container">
-<form action="__SELF__" method="post" content-type="application/x-www-form-urlencoded" onsubmit="return checkCapcha();">
+<div class="col-md-offset-4 col-md-4" style="margin-top:10px;margin-bottom: 60px;">
+<h2 style="text-align: center;margin-top:0px">用户注册</h2>
 
-<div class="reg"><label for="username">用户名:</label><input id="username" name="username" type="text"/><span class="help-block"></span></div>
-<div class="reg"><label for="password">密码</label><input type="password" id="password" name="password"/><span class="help-block"></span></div>
-<div class="reg"><label for="repassword">再次输入</label><input type="password" id="repassword" name="repassword"/><span class="help-block"></span></div>
-<div class="reg"><label for="email">邮箱:</label><input type="text" id="email" name="email"/><span class="help-block"></span></div>
+<form class="form-horizontal" action="__SELF__" method="post" content-type="application/x-www-form-urlencoded" onsubmit="return checkCapcha();">
 
-<div class="reg"><label for="captcha">验证码:</label><input type="text" id="captcha" name="captcha"/><img id="captcha_img" src="__CONTROLLER__/verifyImg" onclick="chimg();"/><span class="help-block"></span></div>
+<div class="form-group"><label class="col-sm-3 control-label" for="username">用户名:</label><div class="col-sm-9"><input class="form-control" id="username" name="username" type="text"/><span class="help-block"></span></div></div>
+<div class="form-group"><label class="col-sm-3 control-label" for="password">密码</label><div class="col-sm-9"><input class="form-control" type="password" id="password" name="password"/><span class="help-block"></span></div></div>
+<div class="form-group"><label class="col-sm-3 control-label" for="repassword">再次输入</label><div class="col-sm-9"><input class="form-control" type="password" id="repassword" name="repassword"/><span class="help-block"></span></div></div>
+<div class="form-group"><label class="col-sm-3 control-label" for="email">邮箱:</label><div class="col-sm-9"><input class="form-control" type="text" id="email" name="email"/><span class="help-block"></span></div></div>
 
-<div id="fbutton">
-<button type='reset' style="font-size:17px;">重置</button>
-<button type="submit" style="font-size:20px;font-weight:bold;">注册</button>
+<div class="form-group"><label class="col-sm-3 control-label" for="captcha">验证码:</label><div class="col-sm-9 input-group"><input class="form-control" type="text" id="captcha" name="captcha"/><span class="input-group-btn"><img id="captcha_img" src="__CONTROLLER__/verifyImg" onclick="chimg();"/><span class="help-block"></span></span></div></div>
+
+<div id="fbutton" class="col-sm-offset-1 col-sm-11">
+<button class="btn btn-default" type='reset'>重置</button>
+<button class="btn btn-primary" type="submit">注册</button>
 </div>
 </form>
-</div>
+
 </div>
 
 <import type="css" file="static.home.css.register" basepath="{$Think.const.SITE_URL}/Public/" />

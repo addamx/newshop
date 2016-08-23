@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv=content-type content="text/html; charset=utf-8" />
-        <title>管理中心:{$Think.const.MODULE_NAME}->{$Think.const.CONTROLLER_NAME}</title>
-    </head>
-<body>
-<form action="__SELF__" method="post" id="aform">
-	<P><label for="name">栏目名:  </label><input type="text" id='name' name="name" value="{$info.name}" /></P>
-	<p>
-	<label for="p_category">父栏目</label>
-	<select name="pid" id="p_category">
+<layout name="Public/layout" />
+
+
+<form class="col-md-4" action="__SELF__" method="post" content-type="application/x-www-form-urlencoded">
+	<div class="form-group">
+		<label class="control-label" for="name">栏目名:  </label><input class="form-control" type="text" id='name' name="name" value="{$info.name}" />
+	</div>
+	<div class="form-group">
+		<label class="control-label" for="p_category">父栏目</label>
+	<select class="form-control" name="pid" id="p_category">
 		<option value="0">无</option>
 		<foreach name="categorys" item="v">
 			<!--disabled本栏目及其子孙栏目-->
-			<option value="{$v.id}" 
+			<option value="{$v.id}">
 				<eq name="v.id" value="$info.pid">selected="selected"</eq> 
 				<eq name="v.id" value="$info.id">disabled="disabled"</eq>
 				<eq name="v.pid" value="$info.id">disabled="disabled"</eq>
@@ -22,10 +20,12 @@
 			</option>
 		</foreach>
 	</select>
-	</p>
-	<p><textarea name="intro" id="" cols="30" rows="10">{$info.intro}</textarea></p>
+	</div>
+
+		<textarea class="form-control" name="intro" id="" cols="30" rows="10">{$info.intro}</textarea>
+
 	<input type="text" name="id" hidden="hidden" value="{$info.id}">
-	<button type='submit'>修改</button>
+	<button class="btn btn-primary" type='submit'>修改</button>
 </form>
 
 </body>

@@ -34,6 +34,12 @@ class AdminController extends BaseController
 
             //通过验证, 记录二维数组的rules数据集
             $this->authList = $this->getAuthList(session('mg_user')['id']);
+            $authRuleModel  = D('AuthRule');
+            $arr            = $this->authList;
+            $nav            = $authRuleModel->getCatTree($arr);
+            //var_dump($nav);
+            $this->assign('mca', strtolower(MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME));
+            $this->assign('nav', $nav);
 
         }
 

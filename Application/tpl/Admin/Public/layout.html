@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv=content-type content="text/html; charset=utf-8" />
+    <title>后台登录 -- NEWSHOP</title>
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet">
+    <jquery/>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.js"></script>
+
+</head>
+<body>
+
+<nav id="nav-admin" class="navbar navbar-inverse">
+<div class="container-fluid">
+    <div id="person">
+            <p class="navbar-text"><div><p class="navbar-text navbar-left"><a class="navbar-link navbar-left" href="__APP__/Home/Index/index">商城主页</a></p></div>
+            </p><p class="navbar-text">{$Think.session.mg_user.username}</p>
+            <a class="navbar-link navbar-left" onclick="if (confirm('确定要退出吗？')) return true; else return false;" href="__MODULE__/Manager/logout"  target="_top"><button class="btn btn-default navbar-btn navbar-left btn-xs">退出</button></a>
+    </div>
+</div>
+</nav>
+
+<div class="row">
+<div id="cat-nav" class="col-md-2 sidebar">
+	<ul class="nav nav-sidebar">
+	<foreach name="nav" item="v">
+		<li class="<eq name='v.name' value='$mca'>active</eq>"><a href="__APP__/{$v.name}">{$v.lev|str_repeat="&nbsp;",###*6}{$v.title}</a></li>			
+	</foreach>
+	</ul>
+</div>
+
+
+<div id='right' class="col-md-10" style="margin-top:20px">
+
+{__CONTENT__}
+
+</div>
+
+</div>
+
+
+<import type="css" file="static.home.css.nav" basepath="{$Think.const.SITE_URL}/Public/" />
+</body>
+</html>
